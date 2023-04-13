@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            text-align: center;
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 2px solid red;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        @media (max-width: 768px) {
+            form {
+                padding: 15px;
+            }
+
+            input,
+            textarea,
+            select {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+
+        <!-- Project Business Owner -->
+        <div style="margin-bottom: 20px;">
+            <label for="Requester Email" style="display: block;">Requester Email:</label>
+            <input type="text" id="Requester Email"
+                style="display: block; width: 100%; max-width: 300px; padding: 5px; border: 1px solid #ced4da; border-radius: 5px;">
+        </div>
+
+
+
+        <!-- Project Type Selector -->
+        <label for="projectType" style="display: block; margin-bottom: 5px;">Project Type:</label>
+        <select id="projectType"
+            style="display: block; width: 100%; max-width: 300px; padding: 5px; border: 1px solid #ced4da; border-radius: 5px; margin-bottom: 20px;">
+            <option value="">Select a project type</option>
+            <option value="project1">Project 0</option>
+            <option value="project2">Project 1</option>
+        </select>
+
+
+        <!-- # of Consultants and Specializations -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div>
+                <label for="numConsultants" style="display: block; margin-bottom: 5px;"># of Consultants:</label>
+                <input type="number" id="numConsultants"
+                    style="display: block; width: 80%; max-width: 130px; padding: 5px; border: 1px solid #ced4da; border-radius: 5px; margin-right: 10px;">
+            </div>
+           
+            <div>
+                <label for="specializations" style="display: block;">Specializations:</label>
+                <select id="specializations"
+                    style="display: block; width: 90%; max-width: 300px; padding: 5px; border: 1px solid #f00; border-radius: 5px; background-clip: padding-box; margin-right: 1px;"
+                    class="checkered-border">
+                    <option value="">Select a specialization</option>
+                    <option value="specialization1">Specialization 1</option>
+                    <option value="specialization2">Specialization 2</option>
+                </select>
+            </div>
+           
+            <div>
+                <label style="visibility: hidden;">&nbsp;</label>
+                <input type="text" id="smallBox" value="+" readonly
+                    style="display: block; width: 50px; padding: 5px; border: 1px solid #ced4da; border-radius: 5px; text-align: center;">
+            </div>
+        </div>
+
+
+
+
+
+        </div>
+        <!-- Requester Team -->
+        <div style="margin-bottom: 20px;">
+            <label for="requesterTeam" style="display: block;">Requester Team:</label>
+            <input type="text" id="requesterTeam"
+                style="display: block; width: 100%; max-width: 300px; padding: 5px; border: 1px solid #ced4da; border-radius: 5px;">
+        </div>
+
+        <!-- Project Name -->
+        <div style="margin-bottom: 20px;">
+            <label for="projectName" style="display: block;">Project Name:</label>
+            <input type="text" id="projectName"
+                style="display: block; width: 100%; max-width: 300px; padding: 5px; border: 1px solid #ced4da; border-radius: 5px;">
+        </div>
+
+        <!-- Project Business Owner -->
+        <div style="margin-bottom: 20px;">
+            <label for="projectBusinessOwner" style="display: block;">Project Business Owner:</label>
+            <input type="text" id="projectBusinessOwner"
+                style="display: block; width: 100%; max-width: 300px; padding: 5px; border: 1px solid #ced4da; border-radius: 5px;">
+        </div>
+
+        <!-- Key Stakeholders -->
+        <div style="margin-bottom: 20px;">
+            <label for="keyStakeholders" style="display: block;">Key Stakeholders:</label>
+            <input type="text" id="keyStakeholders"
+                style="display: block; width: 100%; max-width: 300px; padding: 5px; border: 1px solid #ced4da; border-radius: 5px;">
+        </div>
+
+        <!-- Description -->
+        <div style="margin-bottom: 20px;">
+            <label for="description" style="display: block;">Description:</label>
+            <textarea id="description" rows="4"
+                style="display: block; width: 100%; max-width: 300px; padding: 5px; border: 1px solid #ced4da; border-radius: 5px;"></textarea>
+        </div>
+
+        <!-- Business Impact -->
+        <div style="margin-bottom: 20px;">
+            <label for="businessImpact" style="display: block;">Business Benefit/Impact:</label>
+            <textarea id="businessImpact" rows="4"
+                style="display: block; width: 100%; max-width: 300px; padding: 5px; border: 1px solid #ced4da; border-radius: 5px;"></textarea>
+        </div>
+
+
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+
+
+            <!-- Project Timeline -->
+            <div class="form-element">
+                <label for="projectTimeline" style="display: block;">Project Timeline:</label>
+                <textarea id="projectTimeline" rows="5"
+                    style="display: block; width: 100%; max-width: 300px; padding: 5px; border: 1px solid #f00; border-radius: 5px; background-clip: padding-box;"
+                    class="checkered-border"></textarea>
+            </div>
+
+            <div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="startDate" style="display: block;">Start Date:</label>
+                    <input type="date" id="startDate"
+                        style="display: block; width: 100%; max-width: 130px; padding: 5px; border: 1px solid #f00; border-radius: 5px; background-clip: padding-box;"
+                        class="checkered-border">
+                </div>
+
+
+                <div>
+                    <label for="endDate" style="display: block;">End Date:</label>
+                    <input type="date" id="endDate"
+                        style="display: block; width: 100%; max-width: 130px; padding: 5px; border: 1px solid #f00; border-radius: 5px; background-clip: padding-box;"
+                        class="checkered-border">
+                </div>
+
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <label for="fileUpload" style="display: block;">File Upload:</label>
+            <input type="file" id="fileUpload"
+                style="display: block; width: 100%; max-width: 300px; padding: 5px; border: 1px solid #f00; border-radius: 5px; background-clip: padding-box;"
+                class="checkered-border">
+        </div>
+
+
+    </form>
+</body>
+
+</html>
